@@ -23,6 +23,9 @@ Description="SS-LOCAL"
 Wants=network-online.target
 After=network.target
 
+[Timer]
+OnBootSec=60
+
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/ss-local -c /etc/shadowsocks/{service_file}
